@@ -1,14 +1,14 @@
-import React from "react";
+import React, {useState, useContext} from "react";
 import './Main.css';
 import Event from './Event/Event';
 import { GlobalContext } from '../context/GlobalState';
 
 const Main = () => {
-    const [event, setEvent] = State('');
-    const [time, setTime] = State('');
+    const [event, setEvent] = useState('');
+    const [time, setTime] = useState('');
 
-    const { addEvent } = Context(GlobalContext);
-    const { events } = Context(GlobalContext);
+    const { addEvent } = useContext(GlobalContext);
+    const { events } = useContext(GlobalContext);
 
     const onSubmit = e => {
         e.preventDefault();
@@ -39,7 +39,7 @@ const Main = () => {
             </ul>
             <div className="AddEvent">
                 <form onSubmit={onSubmit}>
-                    <input className="eventFiled" value={event} type="text" onChange={(e) => setEvent(e.target.value)} placeholder="New Event" />
+                    <input className="eventField" value={event} type="text" onChange={(e) => setEvent(e.target.value)} placeholder="New Event" />
                     <input className="eventTime" value={time} type="text" onChange={(e) => setTime(e.target.value)} placeholder="Time" />
                     <button className="submitBtn">Add Event</button>
                 </form>
@@ -51,12 +51,13 @@ const Main = () => {
     );
 }
 
+
+
+// function State(arg0: string): [any, any] {
+//     throw new Error("Function not implemented.");
+// }
+// function Context(GlobalContext: React.Context<{ events }>): { events } {
+//     throw new Error("Function not implemented.");
+// }
+
 export default Main;
-
-function State(arg0: string): [any, any] {
-    throw new Error("Function not implemented.");
-}
-function Context(GlobalContext: React.Context<{ events: never[]; }>): { events: any; } {
-    throw new Error("Function not implemented.");
-}
-

@@ -29,11 +29,13 @@ export const GlobalProvider = ({ children }) => {
         });
     }
 
-    return (<GlobalContext.Provider value={{
+    return (
+    <GlobalContext.Provider value={{
         events: state.events,
         addEvent,
         deleteEvent
     }}>
-    {children}
-    </GlobalContext.Provider>);
+         {children}
+    </GlobalContext.Provider>
+    );
 }
