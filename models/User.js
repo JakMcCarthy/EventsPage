@@ -15,16 +15,15 @@ const UserSchema = new Schema(
       trim: true,
       match: [/^[a-z.]+@[a-z]+.[a-z]{2,3}$/gi],
     },
-    thoughts: [
+    password:{
+      type:String,
+      required:true,
+      minLength:8,
+    },
+    events: [
       {
         type: Schema.Types.ObjectId,
-        ref: 'Thought',
-      },
-    ],
-    friends: [
-      {
-        type: Schema.Types.ObjectId,
-        ref: 'User',
+        ref: 'Event',
       },
     ],
   },
@@ -35,8 +34,8 @@ const UserSchema = new Schema(
   }
 );
 
-UserSchema.virtual('friendCount').get(function () {
-  return this.friends.length;
+UserSchema.virtual('eventCount').get(function () {
+  return this.events.length;
 });
 
 const User = model('User', UserSchema);
