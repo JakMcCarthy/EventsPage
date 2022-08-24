@@ -68,3 +68,48 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+
+# Aaron's API and DB Guide
+
+Contained below are all of the available routes and the data they're expecting. I will also put a quick guide to the objects and how they're set up.
+
+## User
+### User model
+| Property            | Type    | Required? | Unique? | minLength | maxLength |
+|---------------------|---------|-----------|---------|-----------|-----------|
+| username            | string  | yes       | yes     | 6         | n/a       |
+| password            | string  | yes       | no      | 8         | n/a       |
+| email               | string  | yes       | yes     | n/a       | n/a       |
+| eventsCreated       | array   | no        | no      | n/a       | n/a       |
+| eventsCreatedCount  | virtual | automatic | no      | n/a       | n/a       |
+| eventsAttended      | array   | no        | no      | n/a       | n/a       |
+| eventsAttendedCount | virtual | automatic | no      | n/a       | n/a       |
+
+### User routes
+| Route         | Method | Description           | Expected Data                                                             |   |   |
+|---------------|--------|-----------------------|---------------------------------------------------------------------------|---|---|
+| /api/user     | GET    | return all users      | n/a                                                                       |   |   |
+|               | POST   | creates a new user    | {"username:"amhaag","email":"abc@xyz.com","password":"min8chars"}         |   |   |
+| /api/user/:id | GET    | returns specific user | n/a                                                                       |   |   |
+|               | PUT    | updates a user        | same as POST above but you only need to include the field you're updating |   |   |
+|               | DELETE | deletes a user        | n/a                                                                       |   |   |
+## Event
+### Event model
+| Property       | Type             | Required? | minLength | maxLength |
+|----------------|------------------|-----------|-----------|-----------|
+| eventTitle     | string           | yes       | 5         | 60        |
+| eventText      | string           | yes       | 15        | 280       |
+| createdAt      | date             | automatic | n/a       | n/a       |
+| creator        | User             | yes       | n/a       | n/a       |
+| eventTime      | date             | yes       | n/a       | n/a       |
+| attendees      | array (of users) | no        | n/a       | n/a       |
+| attendeesCount | virtual          | automatic | n/a       | n/a       |
+### Event routes
+| Route          | Method | Description            | Expected Data                                                                                                          |   |   |
+|----------------|--------|------------------------|------------------------------------------------------------------------------------------------------------------------|---|---|
+| /api/event     | GET    | return all events      | n/a                                                                                                                    |   |   |
+|                | POST   | creates a new event    | {"eventTitle":"5-60 characters",  "eventText":"15-280 characters",  "creator":"amhaag",  "eventTime":"1661364268620" } |   |   |
+| /api/event/:id | GET    | returns specific event | n/a                                                                                                                    |   |   |
+|                | PUT    | updates an event       | same as POST above but you only need to include the field you're updating                                              |   |   |
+|                | DELETE | deletes an event       | n/a                                                                                                                    |   |   |

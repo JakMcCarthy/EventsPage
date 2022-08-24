@@ -1,9 +1,14 @@
-
 const { Schema, model } = require('mongoose');
 const moment = require('moment');
 
 const EventSchema = new Schema(
   {
+    eventTitle: {
+      type: String,
+      required: true,
+      minlength: 5,
+      maxlength: 60,
+    },
     eventText: {
       type: String,
       required: true,
@@ -16,13 +21,26 @@ const EventSchema = new Schema(
       get: (createdAtVal) =>
         moment(createdAtVal).format('MMM DD, YYYY [at] hh:mm a'),
     },
-    username: {
+    creator: {
       type: String,
       required: true,
     },
     eventTime: {
       type: Date,
-      required: true
+      required: true,
+      get: (eventTimeval) =>
+        moment(eventTimeval).format('MMM DD, YYYY [at] hh:mm a'),
+    },
+    attendees: [
+      {
+        type: Schema.Types.ObjectId,
+        ref: 'User',
+      },
+    ],
+    ticketPrice: {
+      type: Number,
+      required: true,
+      
     },
   },
 
@@ -35,13 +53,10 @@ const EventSchema = new Schema(
   }
 );
 
-EventSchema.virtual('reactionCount').get(function () {
-    return this.reactions.length;
+EventSchema.virtual('attendeesCount').get(function () {
+  return this.attendees.length;
 });
-
 
 const Event = model('Event', EventSchema);
 
-
 module.exports = Event;
-

@@ -7,6 +7,7 @@ const UserSchema = new Schema(
       unique: true,
       trim: true,
       required: true,
+      minlength: 6,
     },
     email: {
       type: String,
@@ -15,12 +16,18 @@ const UserSchema = new Schema(
       trim: true,
       match: [/^[a-z.]+@[a-z]+.[a-z]{2,3}$/gi],
     },
-    password:{
-      type:String,
-      required:true,
-      minLength:8,
+    password: {
+      type: String,
+      required: true,
+      minLength: 8,
     },
-    events: [
+    eventsCreated: [
+      {
+        type: Schema.Types.ObjectId,
+        ref: 'Event',
+      },
+    ],
+    eventsAttended: [
       {
         type: Schema.Types.ObjectId,
         ref: 'Event',
@@ -34,8 +41,12 @@ const UserSchema = new Schema(
   }
 );
 
-UserSchema.virtual('eventCount').get(function () {
-  return this.events.length;
+UserSchema.virtual('eventsCreatedCount').get(function () {
+  return this.eventsCreated.length;
+});
+
+UserSchema.virtual('eventsAttendeeCount').get(function () {
+  return this.eventsAttended.length;
 });
 
 const User = model('User', UserSchema);
