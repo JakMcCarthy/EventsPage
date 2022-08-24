@@ -21,7 +21,7 @@ const Main = () => {
 
         addEvent(newEvent);
 
-        // restet the form
+        // reset the form
         setEvent('');
         setTime('');
       }
