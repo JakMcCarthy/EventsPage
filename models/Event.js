@@ -19,7 +19,7 @@ const EventSchema = new Schema(
       type: Date,
       default: Date.now,
       get: (createdAtVal) =>
-        moment(createdAtVal).format('MMM DD, YYYY [at] hh:mm a'),
+        moment(createdAtVal).format('YYYY-MM-DDTHH:mm:ssZ'),
     },
     creator: {
       type: String,
@@ -29,7 +29,7 @@ const EventSchema = new Schema(
       type: Date,
       required: true,
       get: (eventTimeval) =>
-        moment(eventTimeval).format('MMM DD, YYYY [at] hh:mm a'),
+        moment(eventTimeval).format('YYYY-MM-DDTHH:mm:ssZ'),
     },
     attendees: [
       {
@@ -40,7 +40,6 @@ const EventSchema = new Schema(
     ticketPrice: {
       type: Number,
       required: true,
-      
     },
   },
 
