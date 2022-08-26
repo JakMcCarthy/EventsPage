@@ -6,6 +6,7 @@ const Event = ({ item }) => {
 
     return (
         <li>
+            <span className="Category">{item.category}</span>
             <span className="Event">{item.event}</span>
             <span className="Time">{item.time}</span>
             <span className="Action" onClick={() => deleteEvent(item.id)}>&#10007;</span>
