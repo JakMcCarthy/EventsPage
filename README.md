@@ -87,29 +87,38 @@ Contained below are all of the available routes and the data they're expecting. 
 | eventsAttendedCount | virtual | automatic | no      | n/a       | n/a       |
 
 ### User routes
-| Route         | Method | Description           | Expected Data                                                             |   |   |
-|---------------|--------|-----------------------|---------------------------------------------------------------------------|---|---|
-| /api/user     | GET    | return all users      | n/a                                                                       |   |   |
-|               | POST   | creates a new user    | {"username:"amhaag","email":"abc@xyz.com","password":"min8chars"}         |   |   |
-| /api/user/:id | GET    | returns specific user | n/a                                                                       |   |   |
-|               | PUT    | updates a user        | same as POST above but you only need to include the field you're updating |   |   |
-|               | DELETE | deletes a user        | n/a                                                                       |   |   |
+| Route                        | Method | Description              | Expected Data                                                       |
+|------------------------------|--------|--------------------------|---------------------------------------------------------------------|
+| /api/user                    | GET    | return all users         | n/a                                                                 |
+|                              | POST   | creates a new user       | `{"username:"amhaag","email":"abc@xyz.com","password":"min8chars"}` |
+| /api/user/:id                | GET    | returns specific user    | n/a                                                                 |
+|                              | PUT    | updates a user           | same as POST [DO NOT UPDATE PASSWORD ON THIS ROUTE]                 |
+|                              | DELETE | deletes a user           | n/a                                                                 |
+| /api/user/:id/updatepassword | POST   | updates a users password | `{"password":"newpassword"}`                                        |
+
+*Aaron's note* there's a little quirk to Mongoose that makes it so you can't easily hash an attribute on an existing entry, so in order to get around this I had create a seperate that would hash the password before updating it in the DB. This is why updating a password has it's own route. 
+
 ## Event
 ### Event model
-| Property       | Type             | Required? | minLength | maxLength |
-|----------------|------------------|-----------|-----------|-----------|
-| eventTitle     | string           | yes       | 5         | 60        |
-| eventText      | string           | yes       | 15        | 280       |
-| createdAt      | date             | automatic | n/a       | n/a       |
-| creator        | User             | yes       | n/a       | n/a       |
-| eventTime      | date             | yes       | n/a       | n/a       |
-| attendees      | array (of users) | no        | n/a       | n/a       |
-| attendeesCount | virtual          | automatic | n/a       | n/a       |
+| Property       | Type             | Required? | details                                          |
+|----------------|------------------|-----------|--------------------------------------------------|
+| eventTitle     | string           | yes       | min. 5 chars, max 60 chars                       |
+| eventText      | string           | yes       | min 15 chars, max 280 chars                      |
+| eventTime      | string           | yes       | written in ISO8601 format (YYYY-MM-DDTHH:mm:ssZ) |
+| createdAt      | date             | automatic | written in ISO8601 format (YYYY-MM-DDTHH:mm:ssZ) |
+| creator        | User             | yes       | must enter in a user id                          |
+| attendees      | array (of users) | no        | must enter in a user id                          |
+| attendeesCount | virtual          | automatic | n/a                                              |
+| ticketPrice    | number           | yes       | maximum set at 100                               |
+
+
 ### Event routes
-| Route          | Method | Description            | Expected Data                                                                                                          |   |   |
-|----------------|--------|------------------------|------------------------------------------------------------------------------------------------------------------------|---|---|
-| /api/event     | GET    | return all events      | n/a                                                                                                                    |   |   |
-|                | POST   | creates a new event    | {"eventTitle":"5-60 characters",  "eventText":"15-280 characters",  "creator":"amhaag",  "eventTime":"1661364268620" } |   |   |
-| /api/event/:id | GET    | returns specific event | n/a                                                                                                                    |   |   |
-|                | PUT    | updates an event       | same as POST above but you only need to include the field you're updating                                              |   |   |
-|                | DELETE | deletes an event       | n/a                                                                                                                    |   |   |
+| Route          | Method | Description            | Expected Data |   |   |
+|----------------|--------|------------------------|---------------|---|---|
+| /api/event     | GET    | return all events      | n/a           |   |   |
+|                | POST   | creates a new event    | see below     |   |   |
+| /api/event/:id | GET    | returns specific event | n/a           |   |   |
+|                | PUT    | updates an event       | same as POST  |   |   |
+|                | DELETE | deletes an event       | n/a           |   |   |
+
+Event data expected `{"eventTitle":"5-60 characters", "eventText":"15-280 characters", "creator":"amhaag", "eventTime":"1661364268620" }`

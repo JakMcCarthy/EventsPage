@@ -1,4 +1,6 @@
 const { Schema, model } = require('mongoose');
+const bcrypt = require('bcrypt');
+let SALT_ROUNDS = 10;
 
 const UserSchema = new Schema(
   {
@@ -20,6 +22,7 @@ const UserSchema = new Schema(
       type: String,
       required: true,
       minLength: 8,
+      select: false,
     },
     eventsCreated: [
       {
@@ -37,6 +40,7 @@ const UserSchema = new Schema(
   {
     toJSON: {
       virtuals: true,
+      versionKey: false,
     },
   }
 );
@@ -48,6 +52,30 @@ UserSchema.virtual('eventsCreatedCount').get(function () {
 UserSchema.virtual('eventsAttendeeCount').get(function () {
   return this.eventsAttended.length;
 });
+
+UserSchema.pre('save', function (next) {
+  var user = this;
+
+  if (!user.isModified('password')) return next();
+
+  bcrypt.genSalt(SALT_ROUNDS, function (err, salt) {
+    if (err) return next(err);
+
+    bcrypt.hash(user.password, salt, function (err, hash) {
+      if (err) return next(err);
+
+      user.password = hash;
+      next();
+    });
+  });
+});
+
+UserSchema.methods.comparePassword = function (candidatePassword, cb) {
+  bcrypt.compare(candidatePassword, this.password, function (err, isMatch) {
+    if (err) return cb(err);
+    cb(null, isMatch);
+  });
+};
 
 const User = model('User', UserSchema);
 
