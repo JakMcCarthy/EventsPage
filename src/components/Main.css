@@ -1,3 +1,13 @@
+@font-face {
+    font-family: Almeda;
+    src: url('../assets/fonts/Almeda.ttf');
+    font-weight:lighter;
+  }
+  @font-face {
+    font-family: Alleria;
+    src: url('../assets/fonts/Alleria.ttf');
+  }
+
 .Content {
     width: 100%;
     max-width: 700px;
