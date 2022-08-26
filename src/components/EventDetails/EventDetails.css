@@ -1,3 +1,13 @@
+@font-face {
+    font-family: Almeda;
+    src: url('./assets/fonts/Almeda.ttf');
+    font-weight:lighter;
+  }
+  @font-face {
+    font-family: Alleria;
+    src: url('./assets/fonts/Alleria.ttf');
+  }
+
 .modalBackdrop {
     background-color: rgba(42, 136, 160, 0.4);
 }
@@ -8,7 +18,7 @@
 }
 
 .modalContainer h3 {
-    font-family: cursive;
+    font-family: 'Alleria';
     color: aqua;
 }
 
@@ -20,6 +30,7 @@
 .eventDetails li {
     list-style: none;
     display: inline;
+    font-family: 'Almeda';
 }
 
 
