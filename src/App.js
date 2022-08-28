@@ -10,6 +10,8 @@ import Signup from "./components/Header/pages/Signup"
 import { Route, Routes } from "react-router-dom"
 
 import { GlobalProvider } from './context/GlobalState';
+// this is Aaron's testing element
+// import Test from './components/Test/TestApi';
 
 function App() {
   return (
@@ -25,6 +27,7 @@ function App() {
         </Routes>
       </div>
       <Main />
+      {/* <Test /> */}
     </GlobalProvider>
   );
 }
