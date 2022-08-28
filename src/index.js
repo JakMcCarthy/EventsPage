@@ -4,11 +4,16 @@ import './index.css';
 import './components/Header/navbar.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+//outer for our web app in the browser 
+import { BrowserRouter } from "react-router-dom"
 
+//wrapped our entire application in the browser router bc our entire component is using this one single router to manage all of routing
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
+    <BrowserRouter>
+      <App />
+    </BrowserRouter>
   </React.StrictMode>
 );
 
