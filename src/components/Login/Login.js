@@ -1,14 +1,10 @@
 import React, { useState, useContext } from 'react';
 import '../../index.css';
 import './Login.css';
-// import { GlobalContext } from '../../context/GlobalState';
+import { GlobalContext } from '../../context/GlobalState';
 const { loginHandler,signUpHandler } = require('./userChangeFunctions');
 
 const LoginForm = () => {
-  // function handleSubmit(e){
-  //     e.preventDefault();
-  //     console.log(e.target[1].value);
-  // }
 
   return (
     <div>
