@@ -15,9 +15,16 @@ function Footer() {
                         <Link to='/'>Investors</Link>
                     </div>
                     <div className='footer-link-items'>
-                        <h2>Contace Us</h2>
+                        <h2>Contact Us</h2>
                         <Link to='/'>Contact</Link>
                         <Link to='/'>Support</Link>
+                    </div>
+                    <div className='footer-link-items'>
+                        <h2>Social Media</h2>
+                        <Link to='/'>Facebook</Link>
+                        <Link to='/'>Instagram</Link>
+                        <Link to='/'>Twitter</Link>
+                        <Link to='/'>YouTube</Link>
                     </div>
                 </div>
             </div>
