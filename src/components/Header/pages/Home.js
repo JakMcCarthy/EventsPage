@@ -1,5 +1,14 @@
-export default function Home() {
-    return <h1> Home </h1>
+import React from 'react';
+import '../../../index.css';
+import HeroSection from '../../HeroSection/heroSection';
+
+
+function Home() {
+    return (
+        <>
+        <HeroSection />
+        </>
+    );
 }
 
-
+export default Home;
