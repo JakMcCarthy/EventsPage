@@ -30,8 +30,8 @@ function Footer() {
             </div>
             <section className='social-media'>
                 <div className='social-media-wrap'>
-                    <div className='footer-logo'>
-                        
+                    <div 
+
                     </div>
                 </div>
             </section>
