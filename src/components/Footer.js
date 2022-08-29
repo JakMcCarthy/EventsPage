@@ -28,6 +28,13 @@ function Footer() {
                     </div>
                 </div>
             </div>
+            <section className='social-media'>
+                <div className='social-media-wrap'>
+                    <div className='footer-logo'>
+                        
+                    </div>
+                </div>
+            </section>
         </div>
     );
 }
