@@ -2,9 +2,11 @@ import React, { useState, useContext } from 'react';
 import '../../index.css';
 import './Login.css';
 import { GlobalContext } from '../../context/GlobalState';
+// import Main from '../Main';
 const { loginHandler,signUpHandler } = require('./userChangeFunctions');
 
 function LoginForm(props) {
+  <GlobalContext />
     const [formState, setFormState] = useState({ email: '', password: '' });
     const [login, { error }] = useMutation(LOGIN);
   
@@ -20,14 +22,16 @@ function LoginForm(props) {
         console.log(e);
       }
     };
+    // handleFormSubmit();
   
-    const handleChange = (event) => {
-      const { name, value } = event.target;
-      setFormState({
-        ...formState,
-        [name]: value,
-      });
-    };
+    function handleChange(event) {
+    const { name, value } = event.target;
+    setFormState({
+      ...formState,
+      [name]: value,
+    });
+  }
+    // handleChange();
 
   return (
     <div>
@@ -67,5 +71,6 @@ function LoginForm(props) {
     </div>
   );
 };
+
 
 export default LoginForm;
