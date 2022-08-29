@@ -30,12 +30,24 @@ function Footer() {
             </div>
             <section className='social-media'>
                 <div className='social-media-wrap'>
+                    {/* logo & website rights */}
                     <div className='footer-logo'>
                         <Link to='/' className='social-logo'>
                             AroundTown <i className='fab fa-typo3' />
                         </Link>
                     </div>
                     <small className='website-rights'>AroundTown 2022</small>
+                    {/* social media icons - facebook, instagram, twitter, linkedin */}
+                    <div className='social-icons'>
+                        <Link
+                            className='social-icon-link-facebook'
+                            to='/'
+                            target='_blank'
+                            //  accessibility
+                            aria-label='Facebook'>
+                            <i className='fab fa-facebook-f' />
+                        </Link>
+                    </div>
                 </div>
             </section>
         </div>
