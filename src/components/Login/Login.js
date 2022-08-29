@@ -1,10 +1,8 @@
-import React, {useState, useContext} from "react";
+import React, { useState, useContext } from 'react';
 import '../../index.css';
-import './login.css';
+import './Login.css';
 import { GlobalContext } from '../../context/GlobalState';
-import { Link } from 'react-router-dom';
-import { LOGIN } from '../utils/mutations';
-import Auth from '../utils/auth';
+const { loginHandler,signUpHandler } = require('./userChangeFunctions');
 
 function LoginForm(props) {
     const [formState, setFormState] = useState({ email: '', password: '' });
@@ -31,42 +29,43 @@ function LoginForm(props) {
       });
     };
 
-    return (
+  return (
+    <div>
+      <form className='login-forms' id='login-form' onSubmit={loginHandler}>
+        <h2>Log In</h2>
         <div>
-            <form class="login-forms" id="login-form" onSubmit={handleFormSubmit}>
-                <h2>Log In</h2>
-                <div>
-                    <label htmlFor="email-login">Email address:</label>
-                    <input
-                        placeholder="youremail@email.com"
-                        name="email"
-                        type="email"
-                        id="email-login"
-                        onChange={handleChange}
-                    />
-                </div>
-                <div>
-                    <label htmlFor="password-login">Password:</label>
-                    <input
-                        placeholder="******"
-                        name="password"
-                        type="password"
-                        id="password-login"
-                        onChange={handleChange}
-                    />
-                </div>
-                {error ? (
-                    <div>
-                        <p className="error-text">Email or password not recognized. Please try again or sign up if you do not already have an account.</p>
-                    </div>
-                ) : null}
-                <div>
-                    <button type="submit">Log Me In!</button>
-                    <Link to="/signup">← Go to Signup</Link>
-                </div>
-            </form>
+          <label for='user-login'>user:</label>
+          <input type='text' id='user-login' />
         </div>
-    );
-}
+        <div>
+          <label for='password-login'>password:</label>
+          <input type='password' id='password-login' />
+        </div>
+        <div>
+          <button type='submit'>Log Me In!</button>
+        </div>
+      </form>
+
+      <form className='login-forms' id='signup-form' onSubmit={signUpHandler}>
+        <h2>Sign Up</h2>
+        <div>
+          <label for='username-signup'>username:</label>
+          <input type='text' id='username-signup' />
+        </div>
+        <div>
+          <label for='email-signup'>email:</label>
+          <input type='text' id='email-signup' />
+        </div>
+        <div>
+          <label for='password-signup'>password:</label>
+          <input type='password' id='password-signup' />
+        </div>
+        <div>
+          <button type='submit'>Sign Me Up!</button>
+        </div>
+      </form>
+    </div>
+  );
+};
 
 export default LoginForm;

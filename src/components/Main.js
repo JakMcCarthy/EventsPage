@@ -1,6 +1,6 @@
 import React, {useState, useContext} from "react";
 import './Main.css';
-import Event from './Event/Event';
+//import Event from './Event/Event';
 import { GlobalContext } from '../context/GlobalState';
 
 const Main = () => {
@@ -35,7 +35,7 @@ const Main = () => {
         </div>
         <div className="Body">
             <ul className="Events">
-                {events.map(item => (<Event key={item.id} item={item} />))}
+                {/* {events.map(item => (<Event key={item.id} item={item} />))} */}
             </ul>
             <div className="AddEvent">
                 <form onSubmit={onSubmit}>
