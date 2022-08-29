@@ -6,6 +6,7 @@ import Tickets from "./components/Header/pages/Tickets"
 import Event from "./components/Event/Event"
 import Login from "./components/Header/pages/Login"
 import Signup from "./components/Header/pages/Signup"
+import Footer from '../Footer';
 // these two components allow us to define all routes and group them together
 import { Route, Routes } from "react-router-dom"
 
@@ -28,6 +29,7 @@ function App() {
       </div>
       <Main />
       {/* <Test /> */}
+      <Footer />
     </GlobalProvider>
   );
 }
