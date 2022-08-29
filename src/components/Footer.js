@@ -35,6 +35,7 @@ function Footer() {
                             AroundTown <i className='fab fa-typo3' />
                         </Link>
                     </div>
+                    <small className='website-rights'>AroundTown 2022</small>
                 </div>
             </section>
         </div>
