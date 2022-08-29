@@ -2,23 +2,28 @@ import React from 'react';
 import {Link} from 'react-router-dom';
 import '/Footer.css';
 
+// function for footer, w footer container with item links, logo, website rights, and social media icons
 function Footer() {
     return (
         <div>
+            {/* footer container*/}
             className='footer-container'>
             <div className='footer-links'>
                 <div className='footer-link-wrapper'>
+                    {/* h2 about us with links  */}
                     <div className='footer-link-items'>
                         <h2>About Us</h2>
                         <Link to='/'>Careers</Link>
                         <Link to='/'>Testimonials</Link>
                         <Link to='/'>Investors</Link>
                     </div>
+                    {/* h2 contact us with links */}
                     <div className='footer-link-items'>
                         <h2>Contact Us</h2>
                         <Link to='/'>Contact</Link>
                         <Link to='/'>Support</Link>
                     </div>
+                    {/* h2 social media with links */}
                     <div className='footer-link-items'>
                         <h2>Social Media</h2>
                         <Link to='/'>Facebook</Link>
@@ -28,6 +33,7 @@ function Footer() {
                     </div>
                 </div>
             </div>
+            {/* section including logo, social media information */}
             <section className='social-media'>
                 <div className='social-media-wrap'>
                     {/* logo & website rights */}
