@@ -30,8 +30,10 @@ function Footer() {
             </div>
             <section className='social-media'>
                 <div className='social-media-wrap'>
-                    <div 
-
+                    <div className='footer-logo'>
+                        <Link to='/' className='social-logo'>
+                            AroundTown <i className='fab fa-typo3' />
+                        </Link>
                     </div>
                 </div>
             </section>
