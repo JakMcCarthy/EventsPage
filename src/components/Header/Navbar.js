@@ -1,9 +1,10 @@
 // replace a tags with Link componets from react routers and href with to - useMatch allows us to compare the path were on to the path we want - useResolvedPath allows us to take a relative or absolute path
 import { Link, useMatch, useResolvedPath  } from "react-router-dom"
+//import './src/index.css';
 
 export default function Navbar() {
     return <nav className="nav">
-        <Link to="/" className="site-title">Our Project</Link>
+        <Link to="/" className="site-title">AroundTown</Link>
         <ul>
             
                <CustomLink to="/events">Events</CustomLink>
