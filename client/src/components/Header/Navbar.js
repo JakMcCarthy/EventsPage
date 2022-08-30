@@ -9,8 +9,8 @@ export default function Navbar() {
             
                <CustomLink to="/events">Events</CustomLink>
                <CustomLink to="/tickets">Tickets</CustomLink>
-               <CustomLink to="/login">Login</CustomLink>
-               <CustomLink to="/signup">Signup</CustomLink>
+               <CustomLink to="/login">Login/Signup</CustomLink>
+               {/* <CustomLink to="/signup">Signup</CustomLink> */}
           
 
         </ul>
