@@ -2,9 +2,13 @@ import React, { useState, useContext } from 'react';
 import '../../index.css';
 import './Login.css';
 import { GlobalContext } from '../../context/GlobalState';
+// import Main from '../Main';
 const { loginHandler,signUpHandler } = require('./userChangeFunctions');
 
-const LoginForm = () => {
+function LoginForm(props) {
+  <GlobalContext />
+    const [formState, setFormState] = useState({ email: '', password: '' });
+    const [login, { error }] = useMutation(LOGIN);
 
   return (
     <div>
@@ -44,5 +48,6 @@ const LoginForm = () => {
     </div>
   );
 };
+
 
 export default LoginForm;
