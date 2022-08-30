@@ -2,32 +2,13 @@ import React, { useState, useContext } from 'react';
 import '../../index.css';
 import './Login.css';
 import { GlobalContext } from '../../context/GlobalState';
+// import Main from '../Main';
 const { loginHandler,signUpHandler } = require('./userChangeFunctions');
 
 function LoginForm(props) {
+  <GlobalContext />
     const [formState, setFormState] = useState({ email: '', password: '' });
     const [login, { error }] = useMutation(LOGIN);
-  
-    const handleFormSubmit = async (event) => {
-      event.preventDefault();
-      try {
-        const mutationResponse = await login({
-          variables: { email: formState.email, password: formState.password },
-        });
-        const token = mutationResponse.data.login.token;
-        Auth.login(token);
-      } catch (e) {
-        console.log(e);
-      }
-    };
-  
-    const handleChange = (event) => {
-      const { name, value } = event.target;
-      setFormState({
-        ...formState,
-        [name]: value,
-      });
-    };
 
   return (
     <div>
@@ -67,5 +48,6 @@ function LoginForm(props) {
     </div>
   );
 };
+
 
 export default LoginForm;
