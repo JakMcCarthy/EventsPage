@@ -7,6 +7,7 @@
     align-items: center;
 }
 
+/* flex, text color, placement for footer links/link items  */
 .footer-links{
     width: 100%;
     max-width: 1000px;
@@ -42,11 +43,31 @@
     margin-bottom: 8px;
 }
 
+/* hover for links */
 .footer-link-items a:hover {
     color: lightgray;
     transition: 0.3s ease-out;
 }
 
+/* social media links, icons, wrap, placement, color, sizing */
+.social-icon-link {
+    color: white;
+    font-size: 24px;
+}
+
+.social-media {
+    max-width: 1000px;
+    width: 100%;
+}
+
+.social-media-wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    max-width: 1000px;
+    margin: 40px auto 0 auto;
+}
 
 
 
