@@ -1,5 +1,5 @@
-.footer-container{
-    background-color: #242424;
+.footer-container {
+    background-color: #333333;
     padding: 4rem 0 2rem 0;
     display: flex;
     flex-direction: column;
@@ -8,18 +8,18 @@
 }
 
 /* flex, text color, placement for footer links/link items  */
-.footer-links{
+.footer-links {
     width: 100%;
     max-width: 1000px;
     display: flex;
     justify-content: center;
 }
 
-.footer-link-wrapper{
+.footer-link-wrapper {
     display: flex;
 }
 
-.footer-link-items{
+.footer-link-items {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -34,24 +34,24 @@
 }
 
 .footer-link-items > h2 {
-    color: white;
+    color: darkblue;
 }
 
 .footer-link-items a {
-    color: white;
+    color: darkblue;
     text-decoration: none;
     margin-bottom: 8px;
 }
 
 /* hover for links */
 .footer-link-items a:hover {
-    color: lightgray;
+    color: rgb(210, 55, 205);
     transition: 0.3s ease-out;
 }
 
 /* social media links, icons, wrap, placement, color, sizing */
 .social-icon-link {
-    color: white;
+    color: darkblue;
     font-size: 24px;
 }
 
@@ -76,8 +76,9 @@
     width: 240px;
 }
 
+/* AroundTown logo and website rights */
 .social-logo {
-    color: white;
+    color: darkblue;
     justify-self: start;
     margin-left: 20px;
     cursor: pointer;
@@ -88,5 +89,23 @@
     margin-bottom: 16px;
 }
 
+.website-rights {
+    color: darkblue;
+    margin-bottom: 16px;
+}
 
-
+/* media screen sizing for small screens */
+@media screen and (max-width: 768px) {
+    .footer-links {
+        padding-top: 2rem;
+    }
+    .footer-input {
+        width: 100%;
+    }
+    .footer-link-wrapper {
+        flex-direction: column;
+    }
+    .social-media-wrap {
+        flex-direction: column;
+    }
+}

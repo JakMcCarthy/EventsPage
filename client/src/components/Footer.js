@@ -7,7 +7,8 @@ function Footer() {
     return (
         <div>
             {/* footer container*/}
-            className='footer-container'>
+            {/* <div className='footer-container'> */}
+
             <div className='footer-links'>
                 <div className='footer-link-wrapper'>
                     {/* h2 about us with links  */}
@@ -76,7 +77,7 @@ function Footer() {
                             //  accessibility
                             aria-label='LinkedIn'>
                             <i className='fab fa-linkedin' />
-                        </Link> 
+                        </Link>
                         <Link
                             className='social-icon-link youtube'
                             to='/'
