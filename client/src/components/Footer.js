@@ -76,6 +76,14 @@ function Footer() {
                             //  accessibility
                             aria-label='LinkedIn'>
                             <i className='fab fa-linkedin' />
+                        </Link> 
+                        <Link
+                            className='social-icon-link youtube'
+                            to='/'
+                            target='_blank'
+                            //  accessibility
+                            aria-label='YouTube'>
+                            <i className='fab fa-youtube' />
                         </Link>
                     </div>
                 </div>
