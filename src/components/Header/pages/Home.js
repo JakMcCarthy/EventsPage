@@ -9,6 +9,7 @@ function Home() {
         <HeroSection />
         </>
     );
+
 }
 
 export default Home;

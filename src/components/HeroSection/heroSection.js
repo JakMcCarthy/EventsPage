@@ -5,10 +5,11 @@ import './herosection.css';
 
 function HeroSection() {
     return (
-        <div className="hero-container parallax">
+       <div className="parallax"> 
+        <div className="hero-container">
             <h1> Entertainment Awaits </h1>
             <p> What are you waiting for? </p>
-            
+        </div>     
         </div>
     )
 }
