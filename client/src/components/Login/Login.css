@@ -1,0 +1,40 @@
+.login-forms {
+    background-color: #333333;
+    color: aliceblue;
+    padding: 20px;
+    margin: 6px;
+    border-radius: 10%;
+}
+
+.login-forms h2 {
+    color: aqua;
+}
+
+.login-forms button {
+    color: black;
+    background-color:aqua;
+    border-radius: 10%;
+    padding: 5px;
+    border-style: none;
+    box-shadow: 2px 2px 3px black;
+    font-weight: normal;
+}
+.login-forms button:hover {
+    color: black;
+    padding: 7px;
+    background: radial-gradient(circle, rgba(0,255,255,1) 0%, rgba(0,169,247,1) 100%);
+    box-shadow: 4px 4px 5px black;
+}
+.login-forms button:active {
+    background-color: rgba(0,169,247,1);
+    box-shadow: 1px 1px 1px black;
+    font-weight: bold;
+    padding: 8px;
+}
+
+.hidden {
+    display: none;
+}
+
+
+
