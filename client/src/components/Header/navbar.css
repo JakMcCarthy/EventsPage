@@ -9,7 +9,7 @@
 
 
  .nav {
-    background-color: rgb(235, 235, 235);
+    background-color: #333333;
     color:white;
     display: flex;
     justify-content: space-between;
