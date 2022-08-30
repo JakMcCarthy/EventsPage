@@ -7,3 +7,8 @@ export function validateEmail(email) {
     return re.test(String(email).toLowerCase());
   }
   
+export function formatDate(date) {
+    return `${new Date(date).getMonth() + 1}/${new Date(date).getDate()}/${new Date(
+      date
+    ).getFullYear()}`;
+  }
