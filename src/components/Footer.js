@@ -1,6 +1,6 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
-import '/Footer.css';
+import './Footer.css';
 
 // function for footer, w footer container with item links, logo, website rights, and social media icons
 function Footer() {
