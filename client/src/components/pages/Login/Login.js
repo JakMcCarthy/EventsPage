@@ -1,14 +1,14 @@
 import React, { useState, useContext } from 'react';
-import '../../index.css';
+import '../../../index.css';
 import './Login.css';
-import { GlobalContext } from '../../context/GlobalState';
+import { GlobalContext } from '../../../context/GlobalState';
 // import Main from '../Main';
 const { loginHandler,signUpHandler } = require('./userChangeFunctions');
 
 function LoginForm(props) {
   <GlobalContext />
     const [formState, setFormState] = useState({ email: '', password: '' });
-    const [login, { error }] = useMutation(LOGIN);
+    // const [login] = useMutation(LOGIN);
 
   return (
     <div>

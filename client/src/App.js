@@ -4,7 +4,7 @@ import Navbar from './components/Header/Navbar';
 import Home from './components/pages/Home';
 import Tickets from './components/pages/Tickets';
 import Event from './components/Event/Event';
-import Login from './components/pages/Login';
+import Login from './components/pages/Login/Login';
 import Signup from './components/pages/Signup';
 import Footer from './components/Footer';
 // these two components allow us to define all routes and group them together
