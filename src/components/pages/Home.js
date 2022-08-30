@@ -1,6 +1,6 @@
 import React from 'react';
-import '../../../index.css';
-import HeroSection from '../../HeroSection/heroSection';
+import '../../index.css';
+import HeroSection from '../HeroSection/heroSection';
 
 
 function Home() {
