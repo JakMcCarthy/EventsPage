@@ -37,13 +37,6 @@ const Main = () => {
             <ul className="Events">
                 {/* {events.map(item => (<Event key={item.id} item={item} />))} */}
             </ul>
-            <div className="AddEvent">
-                <form onSubmit={onSubmit}>
-                    <input className="eventField" value={event} type="text" onChange={(e) => setEvent(e.target.value)} placeholder="New Event" />
-                    <input className="eventTime" value={time} type="text" onChange={(e) => setTime(e.target.value)} placeholder="Time" />
-                    <button className="submitBtn">Add Event</button>
-                </form>
-            </div>
         </div>
     </div>
 
