@@ -6,7 +6,7 @@ import Tickets from './components/pages/Tickets';
 import Event from './components/Event/Event';
 import Login from './components/pages/Login';
 import Signup from './components/pages/Signup';
-import Footer from '../Footer';
+import Footer from './components/Footer';
 // these two components allow us to define all routes and group them together
 import {Route, Routes} from 'react-router-dom';
 
