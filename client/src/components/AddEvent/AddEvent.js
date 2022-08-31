@@ -1,5 +1,6 @@
 import React, {useState, useContext} from "react";
 import '../Main.css';
+import './AddEvent.css';
 import { GlobalContext } from '../../context/GlobalState';
 import eventHelper from '../../utils/eventsFunctions'
 

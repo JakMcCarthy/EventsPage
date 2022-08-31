@@ -1,0 +1,49 @@
+.Content > .Body > .AddEvent {
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.Content > .Body > .AddEvent form {
+    width: 100%;
+    display: flex;
+}
+.Content > .Body > .AddEvent input[type="text"] {
+    display: block;
+    font-size: 17px;
+    padding: 5px;
+    color: #000;
+}
+
+.eventField{
+    width: 100%;
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
+    border: 1px solid #ddd;
+}
+.eventDescription{
+    width: 100%;
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+    border: 1px solid #ddd;
+}
+.eventTime{
+    width: 30%;
+    border: 1px solid #ddd;
+    border-left: none;
+}
+.Content > .Body > .AddEvent .submitBtn {
+    width: 25%;
+    border-left: none;
+    border-top: 1px solid #ddd;
+    border-right: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+    background-color: #dddddd;
+    cursor: pointer;
+}
+
+input[type="text"], button { 
+    outline: none;
+}
