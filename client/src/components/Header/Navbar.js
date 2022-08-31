@@ -7,7 +7,7 @@ export default function Navbar() {
         <Link to="/" className="site-title" id="site-title">AroundTown</Link>
         <ul>
             
-               <CustomLink to="/events">Events</CustomLink>
+               <CustomLink to="/events">Create Event</CustomLink>
                <CustomLink to="/tickets">Tickets</CustomLink>
                <CustomLink to="/login">Login/Signup</CustomLink>
                {/* <CustomLink to="/signup">Signup</CustomLink> */}

@@ -1,3 +1,10 @@
+import AddEvent from '../AddEvent/AddEvent';
+
 export default function Tickets() {
-    return <h1> Tickets </h1>
+  return (
+    <div>
+      <h1> Tickets </h1>
+      <AddEvent />;
+    </div>
+  );
 }

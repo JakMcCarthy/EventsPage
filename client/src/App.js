@@ -3,7 +3,7 @@ import Main from './components/Main';
 import Navbar from './components/Header/Navbar';
 import Home from './components/pages/Home';
 import Tickets from './components/pages/Tickets';
-import Event from './components/Event/Event';
+import Event from './components/pages/Event';
 import Login from './components/pages/Login/Login';
 import Signup from './components/pages/Signup';
 import Footer from './components/Footer';
@@ -22,7 +22,7 @@ function App() {
                 <Routes>
                     <Route path='/' element={<Home />} />
                     <Route path='/tickets' element={<Tickets />} />
-                    {/* <Route path='/event' element={<Event />} /> */}
+                    <Route path='/events' element={<Event />} />
                     <Route path='/login' element={<Login />} />
                     <Route path='/signup' element={<Signup />} />
                 </Routes>
