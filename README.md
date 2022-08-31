@@ -5,6 +5,10 @@
   * Deployed application via Heroku 
   * Git Hub Repo: https://github.com/JakMcCarthy/EventsPage.git
 
+## Features
+    * Create events with name, time and description 
+    * Browse for posted local events
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
