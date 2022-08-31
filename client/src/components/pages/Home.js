@@ -10,7 +10,7 @@ function Home() {
         <>
         <HeroSection />
         { /* only show AddEvent if logged in */ }
-        <AddEvent />
+        {/* <AddEvent /> */}
         <Cards />
         </>
     );

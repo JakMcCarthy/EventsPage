@@ -11,6 +11,7 @@
 
 ## Future Enhancements
     * Implent ticket system for online purchase using stripe
+    * Add ability to attend events
 
 ## Contact/Questions
 This project was a collaboration of the following people: 
@@ -124,8 +125,8 @@ Contained below are all of the available routes and the data they're expecting. 
 ### Event model
 | Property       | Type             | Required? | details                                          |
 |----------------|------------------|-----------|--------------------------------------------------|
-| eventTitle     | string           | yes       | min. 5 chars, max 60 chars                       |
-| eventText      | string           | yes       | min 15 chars, max 280 chars                      |
+| eventTitle     | string           | yes       | min. 1 chars, max 60 chars                       |
+| eventText      | string           | yes       | min 5 chars, max 280 chars                      |
 | eventTime      | string           | yes       | written in ISO8601 format (YYYY-MM-DDTHH:mm:ssZ) |
 | createdAt      | date             | automatic | written in ISO8601 format (YYYY-MM-DDTHH:mm:ssZ) |
 | creator        | User             | yes       | must enter in a user id                          |

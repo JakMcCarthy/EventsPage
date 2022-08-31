@@ -6,13 +6,13 @@ const EventSchema = new Schema(
     eventTitle: {
       type: String,
       required: true,
-      minlength: 5,
+      minlength: 1,
       maxlength: 60,
     },
     eventText: {
       type: String,
       required: true,
-      minlength: 15,
+      minlength: 5,
       maxlength: 280,
     },
     createdAt: {
@@ -26,10 +26,8 @@ const EventSchema = new Schema(
       required: true,
     },
     eventTime: {
-      type: Date,
+      type: String,
       required: true,
-      get: (eventTimeval) =>
-        moment(eventTimeval).format('YYYY-MM-DDTHH:mm:ssZ'),
     },
     attendees: [
       {
@@ -39,7 +37,7 @@ const EventSchema = new Schema(
     ],
     ticketPrice: {
       type: Number,
-      required: true,
+      required: false,
     },
   },
 

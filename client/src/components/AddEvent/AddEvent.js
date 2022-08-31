@@ -1,6 +1,7 @@
 import React, {useState, useContext} from "react";
 import '../Main.css';
 import { GlobalContext } from '../../context/GlobalState';
+import eventHelper from '../../utils/eventsFunctions'
 
 const AddEvent = () => {
     const [event, setEvent] = useState('');
@@ -21,6 +22,8 @@ const AddEvent = () => {
         }
 
         addEvent(newEvent);
+        console.log(newEvent)
+        eventHelper.createEvent(event,description,time,0)
 
         // reset the form
         setEvent('');
