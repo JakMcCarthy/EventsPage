@@ -9,6 +9,9 @@
     * Create events with name, time and description 
     * Browse for posted local events
 
+## Future Enhancements
+    * Implent ticket system for online purchase using stripe
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
