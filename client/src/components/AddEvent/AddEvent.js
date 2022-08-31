@@ -43,7 +43,7 @@ const AddEvent = () => {
                         <br/>
                         <textarea className="eventDescription" value={description} type="text" onChange={(e) => setDescription(e.target.value)} placeholder="Description" />
                         <br/>
-                        <button className="submitBtn">Add Event</button>
+                        <button className="submitBtn">Create Event</button>
                     </form>
                 </div>
             </div>
