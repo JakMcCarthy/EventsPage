@@ -22,6 +22,11 @@
     font-size: 2rem;
  }
   
+#site-title{
+   font-size: 2.5rem;
+}
+
+
  .nav ul {
     padding: 0;
     margin: 0;
@@ -38,10 +43,11 @@
     display: flex;
     align-items: center;
     padding: .25rem;
+    font-size: 1.5rem;
  }
   
  .nav li.active {
-    background-color: rgb(80, 12, 107) ;
+    background-color: #575757;
  }
   
  .nav li.hover {
