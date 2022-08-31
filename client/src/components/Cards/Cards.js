@@ -10,38 +10,38 @@ function Cards() {
         <div className="cards-wrapper">
           <ul className="cards-items">
           <CardItem
-              title='Event 1 Title Test'
-              text='This event is going to be alot of fun get there early'
-              time='2:00pm - 6:00pm'
+              title='Labor Day Block Party'
+              text="Block party for families on Summer Street. We're taking over the whole block!"
+              time='Labor Day, 3:00pm - 8:00pm'
             />
              <CardItem
-              title='Event 2 Title Test'
-              text='This event is going to be alot of fun get there early'
-              time='2:00pm - 6:00pm'
+              title='Potluck Picnic'
+              text='A picnic in Memorial Park! Bring your favorite picnic dish.'
+              time='This Saturday, starting at 6:00pm'
             />
             <CardItem
-              title='Event 3 Title Test'
-              text='This event is going to be alot of fun get there early'
-              time='2:00pm - 6:00pm'
+              title='Brunch Party'
+              text='Bottomless mimosas! (21+ event)'
+              time='Sunday 9/18, 10:00am - 2:00pm'
             />
             
           </ul>
 
           <ul className="cards-items">
           <CardItem
-              title='Event 4 Title Test'
-              text='This event is going to be alot of fun get there early'
-              time='2:00pm - 6:00pm'
+              title='Open Mic Night'
+              text="Grab your guitars and your books of slam poetry! It's an open mic night at Dave's Downtown Bar."
+              time='Every Thursday, 7:00pm - 11:00pm'
             />
              <CardItem
-              title='Event 5 Title Test'
-              text='This event is going to be alot of fun get there early'
-              time='2:00pm - 6:00pm'
+              title="Samantha's Secret Party"
+              text='Contact Samantha for details... Only the coolest people are invited'
+              time="It's a secret"
             />
             <CardItem
-              title='Event 6 Title Test'
-              text='This event is going to be alot of fun get there early'
-              time='2:00pm - 6:00pm'
+              title='Story Time'
+              text='Story time for kids ages 6 - 10 at the public library. Feel free to bring a blanket or stuffed animal!'
+              time='Every Tuesday, 3:00pm - 4:00pm'
             />
             
           </ul>
