@@ -1,3 +1,9 @@
+# Around Town
+### Around Town will make attending your favorite events much easier. Make local events of your own for the local community to attend or browse and see what upcoming events are coming near you.
+
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
