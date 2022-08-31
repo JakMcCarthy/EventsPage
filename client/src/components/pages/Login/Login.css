@@ -1,3 +1,13 @@
+@font-face {
+    font-family: Almeda;
+    src: url('../../../assets/fonts/Almeda.ttf');
+    font-weight:lighter;
+  }
+  @font-face {
+    font-family: Alleria;
+    src: url('../../../assets/fonts/Alleria.ttf');
+  }
+
 .login-forms {
     background-color: #333333;
     color: aliceblue;
@@ -9,7 +19,16 @@
 
 .login-forms h2 {
     color: aqua;
-    font-family: 'Alleria';
+    font-family: 'Almeda';
+    margin: auto;
+    font-size: 2em;
+}
+
+.login-forms input {
+    padding: 3px;
+    border-radius: 2px;
+    border-style: none;
+    margin: 1rem;
 }
 
 .login-forms button {

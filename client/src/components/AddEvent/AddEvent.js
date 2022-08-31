@@ -1,7 +1,6 @@
 import React, {useState, useContext} from "react";
 import '../Main.css';
-
-import { GlobalContext } from '../context/GlobalState';
+import { GlobalContext } from '../../context/GlobalState';
 
 const AddEvent = () => {
     const [event, setEvent] = useState('');
