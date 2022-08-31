@@ -35,7 +35,7 @@ const AddEvent = () => {
         <div className="Content">
             <div className="Header">
                 <div className="Layer">
-                    Events
+                    Share your event
                 </div>
             </div>
             <div className="Body">
