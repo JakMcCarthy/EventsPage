@@ -5,11 +5,16 @@ import './Footer.css';
 // function for footer, w footer container with item links, logo, website rights, and social media icons
 function Footer() {
     return (
-        <div>
-            {/* footer container*/}
-            {/* <div className='footer-container'> */}
-
+        <div className='footer-container'>
             <div className='footer-links'>
+                <head>
+                    <link
+                        rel='stylesheet'
+                        href='https://use.fontawesome.com/releases/v5.13.1/css/all.css'
+                        integrity='sha384-xxzQGERXS00kBmZW/6qxqJPyxW3UR0BPsL4c8ILaIWXva5kFi7TxkIIaMiKtqV1Q'
+                        crossorigin='anonymous'
+                    />
+                </head>
                 <div className='footer-link-wrapper'>
                     {/* h2 about us with links  */}
                     <div className='footer-link-items'>
@@ -40,10 +45,11 @@ function Footer() {
                     {/* logo & website rights */}
                     <div className='footer-logo'>
                         <Link to='/' className='social-logo'>
-                            AroundTown <i className='fab fa-typo3' />
+                            By:AroundTown <i className='fab fa-typo3' />
                         </Link>
                     </div>
                     <small className='website-rights'>AroundTown 2022</small>
+
                     {/* social media icons - facebook, instagram, twitter, linkedin */}
                     <div className='social-icons'>
                         <Link

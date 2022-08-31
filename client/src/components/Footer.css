@@ -1,5 +1,5 @@
 .footer-container {
-    background-color: #333333;
+    background-color: lightgrey;
     padding: 4rem 0 2rem 0;
     display: flex;
     flex-direction: column;
@@ -83,7 +83,7 @@
     margin-left: 20px;
     cursor: pointer;
     text-decoration: none;
-    font-size: 2rem;
+    font-size: 1rem;
     display: flex;
     align-self: center;
     margin-bottom: 16px;
@@ -91,7 +91,7 @@
 
 .website-rights {
     color: darkblue;
-    margin-bottom: 16px;
+    margin-bottom: 12px;
 }
 
 /* media screen sizing for small screens */
