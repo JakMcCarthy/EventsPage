@@ -115,12 +115,15 @@
   .cards-item {
     margin: auto;
     width: 90%;
-    margin-top: 8px;
+    margin-top: 14px;
+    box-shadow: -10px -10px 14px black;
   }
   .cards-items {
     margin: auto;
     width: 90%;
   }
-
+  .cards {
+    padding: 0;
+  }
   
 }
