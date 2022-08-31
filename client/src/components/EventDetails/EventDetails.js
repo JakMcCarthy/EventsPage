@@ -1,7 +1,7 @@
 import React from 'react';
 
 const EventDetails = ({ onClose, currentEvent }) => {
-  const { name, description, category, ticketPrice, ticketsSold, time, location, creator, creationTimestamp } = currentEvent;
+  const { name, description, ticketPrice, ticketsSold, time, creator, creationTimestamp } = currentEvent;
 
   return (
     <div className="modalBackdrop">
@@ -10,14 +10,8 @@ const EventDetails = ({ onClose, currentEvent }) => {
             {name} 
         </h3>
         <ul className="eventDetails">
-            <li className="eventCategory">
-                Event Type: {category}
-            </li>
             <li className="eventTime">
                 Date: {time}
-            </li>
-            <li className="eventLocation">
-                Location: {location}
             </li>
             <li className='eventCreator'>
                 Created by: {creator} at {creationTimestamp}
@@ -29,9 +23,11 @@ const EventDetails = ({ onClose, currentEvent }) => {
                 Tickets sold: {ticketsSold}
             </li>
         </ul>
-        <p>
-            {description}
-        </p>
+        <div class='event-description'>
+          <p>
+              {description}
+          </p>
+        </div>
         <button type="button" class="eventSignup">
           Sign Me Up!
         </button>

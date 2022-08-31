@@ -1,16 +1,13 @@
 @font-face {
     font-family: Almeda;
-    src: url('./assets/fonts/Almeda.ttf');
+    src: url('../../assets/fonts/Almeda.ttf');
     font-weight:lighter;
   }
   @font-face {
     font-family: Alleria;
-    src: url('./assets/fonts/Alleria.ttf');
+    src: url('../../assets/fonts/Alleria.ttf');
   }
 
-.modalBackdrop {
-    background-color: rgba(42, 136, 160, 0.4);
-}
 
 .modalContainer {
     background-color: #333333;
@@ -18,7 +15,7 @@
 }
 
 .modalContainer h3 {
-    font-family: 'Alleria';
+    font-family: 'Almeda';
     color: aqua;
 }
 
@@ -33,6 +30,9 @@
     font-family: 'Almeda';
 }
 
+.event-description {
+    text-align:center;
+}
 
 .eventSignup {
     color: black;

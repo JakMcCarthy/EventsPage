@@ -1,5 +1,6 @@
 const { User, Event } = require('../models');
 const bcrypt = require('bcrypt');
+const auth = require('../utils/auth');
 
 const userController = {
   getAllUsers: function (req, res) {
@@ -64,7 +65,13 @@ const userController = {
           dbUserData.password,
           function (err, result) {
             if (result) {
-              res.json(dbUserData);
+              res.json(
+                auth.signToken({
+                  username: dbUserData.username,
+                  email: dbUserData.email,
+                  _id: dbUserData._id,
+                })
+              );
             }
             if (!result) {
               res.sendStatus(400);

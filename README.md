@@ -1,3 +1,25 @@
+# Around Town
+### Around Town will make attending your favorite events much easier. Make local events of your own for the local community to attend or browse and see what upcoming events are coming near you.
+
+## Installation/ Usage
+  * Deployed application via Heroku https://damp-cove-99714.herokuapp.com/
+  * Git Hub Repo: https://github.com/JakMcCarthy/EventsPage.git
+
+## Features
+    * Create events with name, time and description 
+    * Browse for posted local events
+
+## Future Enhancements
+    * Implent ticket system for online purchase using stripe
+
+## Contact/Questions
+This project was a collaboration of the following people: 
+  * GitHub: https://github.com/JakMcCarthy
+  * GitHub: https://github.com/Smccarthy17
+  * GitHub: https://github.com/rpethick0207
+  * GitHub: https://github.com/AMHaag/
+  * GitHub: https://github.com/negativeh0ll0w
+  * GitHub: https://github.com/Chrisp1993
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

@@ -1,0 +1,100 @@
+@font-face {
+  font-family: Almeda;
+  src: url('../../assets/fonts/Almeda.ttf');
+  font-weight:lighter;
+}
+
+.cards {
+    padding: 4rem;
+    background: #00ffff
+  }
+  
+  h1 {
+    text-align: center;
+    font-size: 55px;
+    font-weight: 800;
+    font-family: 'Almeda';
+  }
+  
+  .cards-container {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    max-width: auto;
+    width: 90%;
+    margin: 0 auto;
+    border: 2px solid #333333;
+    background-color:#333333;
+    border-radius: 10px;
+  }
+  
+  .cards-wrapper {
+    position: relative;
+  
+    margin: 55px 0  45px;
+    
+  }
+  
+  .cards-items {
+    margin-bottom: 24px;
+
+  }
+  
+  .cards-item {
+    display: flex;
+    flex: 1;
+    margin: 0 1rem;
+    border-radius: 10px;
+    background-color: rgb(153, 153, 153);
+    
+  }
+
+  .card-item-title {
+    color: #333;
+    font-size: 25px;
+    line-height: 20px;
+    text-align: center;
+  
+  }
+
+  .cards-item-time {
+    color: #333;
+    background-color: #00ffff;
+    border-radius: 5px;
+    padding: 12px;
+    font-size: 22px;
+    line-height: 20px;
+    text-align:center;
+  
+  }
+  
+  .cards-item-text {
+    color: #fff;
+    font-size: 20px;
+    line-height: 24px;
+    text-align:center;
+  }
+  
+  
+  .cards-item-info {
+    padding: 20px 30px 30px;
+  }
+  
+  
+  @media only screen and (min-width: 1200px) {
+    .content-blog-container {
+      width: 84%;
+    }
+  }
+  
+  @media only screen and (min-width: 1024px) {
+    .cards-items {
+      display: flex;
+    }
+  }
+  
+  @media only screen and (max-width: 1024px) {
+    .cards-item {
+      margin-bottom: 2rem;
+    }
+  }

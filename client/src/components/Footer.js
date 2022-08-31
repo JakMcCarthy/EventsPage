@@ -5,7 +5,13 @@ import './Footer.css';
 // function for footer, w footer container with item links, logo, website rights, and social media icons
 function Footer() {
     return (
+<<<<<<< HEAD
         <div className='footer-container'>
+=======
+        <div>
+            {/* footer container*/}
+            
+>>>>>>> e1f1abb54a5d864d1b58617f50798a348d560e7e
             <div className='footer-links'>
                 <head>
                     <link
