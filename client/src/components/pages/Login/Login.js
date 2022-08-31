@@ -4,11 +4,10 @@ import './Login.css';
 import { GlobalContext } from '../../../context/GlobalState';
 // import Main from '../Main';
 const { loginHandler,signUpHandler } = require('./userChangeFunctions');
-
+ 
 function LoginForm(props) {
   <GlobalContext />
     const [formState, setFormState] = useState({ email: '', password: '' });
-    // const [login] = useMutation(LOGIN);
 
   return (
     <div>
