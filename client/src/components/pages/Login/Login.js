@@ -9,6 +9,7 @@ function LoginForm(props) {
   <GlobalContext />
     const [formState, setFormState] = useState({ email: '', password: '' });
 
+
   return (
     <div>
       <form className='login-forms' id='login-form' onSubmit={loginHandler}>
