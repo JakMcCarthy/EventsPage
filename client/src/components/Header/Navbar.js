@@ -8,7 +8,7 @@ export default function Navbar() {
         <ul>
             
                <CustomLink to="/events">Create Event</CustomLink>
-               <CustomLink to="/tickets">Tickets</CustomLink>
+               {/* <CustomLink to="/tickets">Tickets</CustomLink> */}
                <CustomLink to="/login">Login/Signup</CustomLink>
                {/* <CustomLink to="/signup">Signup</CustomLink> */}
           
