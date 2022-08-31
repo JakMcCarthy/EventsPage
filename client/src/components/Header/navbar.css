@@ -5,7 +5,7 @@
  }
  @font-face {
    font-family: Alleria;
-   src: url('../assets/fonts/Alleria.ttf');
+   src: url('../../assets/fonts/Alleria.ttf');
  }
 
 * {
