@@ -12,6 +12,14 @@
 ## Future Enhancements
     * Implent ticket system for online purchase using stripe
 
+## Contact/Questions
+This project was a collaboration of the following people: 
+  * GitHub: https://github.com/JakMcCarthy
+  * GitHub: https://github.com/Smccarthy17
+  * GitHub: https://github.com/rpethick0207
+  * GitHub: https://github.com/AMHaag/
+  * GitHub: https://github.com/negativeh0ll0w
+  * GitHub: https://github.com/Chrisp1993
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
