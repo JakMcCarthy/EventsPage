@@ -1,8 +1,9 @@
 # Around Town
 ### Around Town will make attending your favorite events much easier. Make local events of your own for the local community to attend or browse and see what upcoming events are coming near you.
 
-
-
+## Installation/ Usage
+  * Deployed application via Heroku 
+  * Git Hub Repo: https://github.com/JakMcCarthy/EventsPage.git
 
 # Getting Started with Create React App
 
