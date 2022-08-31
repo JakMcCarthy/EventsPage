@@ -97,11 +97,16 @@
     border-bottom-left-radius: 3px;
     border: 1px solid #ddd;
 }
+.eventDescription{
+    width: 100%;
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
+    border: 1px solid #ddd;
+}
 .eventTime{
     width: 30%;
     border: 1px solid #ddd;
     border-left: none;
-    border-right: none;
 }
 .Content > .Body > .AddEvent .submitBtn {
     width: 25%;

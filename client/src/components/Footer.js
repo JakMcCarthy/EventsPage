@@ -7,7 +7,7 @@ function Footer() {
     return (
         <div>
             {/* footer container*/}
-            className='footer-container'>
+            
             <div className='footer-links'>
                 <div className='footer-link-wrapper'>
                     {/* h2 about us with links  */}

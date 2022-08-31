@@ -1,23 +1,45 @@
+@font-face {
+    font-family: Almeda;
+    src: url('../../../assets/fonts/Almeda.ttf');
+    font-weight:lighter;
+  }
+  @font-face {
+    font-family: Alleria;
+    src: url('../../../assets/fonts/Alleria.ttf');
+  }
+
 .login-forms {
     background-color: #333333;
     color: aliceblue;
     padding: 20px;
-    margin: 6px;
-    border-radius: 10%;
+    margin: 6px auto;
+    border-radius: 5px;
+    width: 30%;
 }
 
 .login-forms h2 {
     color: aqua;
+    font-family: 'Almeda';
+    margin: auto;
+    font-size: 2em;
+}
+
+.login-forms input {
+    padding: 3px;
+    border-radius: 2px;
+    border-style: none;
+    margin: 1rem;
 }
 
 .login-forms button {
     color: black;
     background-color:aqua;
-    border-radius: 10%;
+    border-radius: 4px;
     padding: 5px;
     border-style: none;
     box-shadow: 2px 2px 3px black;
     font-weight: normal;
+    margin: 4px;
 }
 .login-forms button:hover {
     color: black;
@@ -36,5 +58,11 @@
     display: none;
 }
 
+
+@media only screen and (max-width: 600px) {
+    .login-forms {
+      width: 50%;
+    }
+  }
 
 

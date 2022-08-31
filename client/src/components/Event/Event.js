@@ -1,27 +1,23 @@
-// import React, { useContext } from 'react';
-// import { GlobalContext } from '../../context/GlobalState';
-// import EventDetails from '../EventDetails/EventDetails.js';
+import React, { useContext } from 'react';
+import { GlobalContext } from '../../context/GlobalState';
+import AddEvent from '../AddEvent/AddEvent';
+import EventDetails from '../EventDetails/EventDetails.js';
 
-// const Event = ({ item }) => {
-//     const { deleteEvent } = useContext(GlobalContext);
+const Event = ({ item }) => {
+    const { deleteEvent } = useContext(GlobalContext);
 
-
-//     const toggleModal = (item, i) => {
-//         setCurrentEvent({ ...item, index: i });
-//         setIsModalOpen(!isModalOpen);
-//     };
-
-//     return (
-
-//         <li onClick={() => toggleModal(item, i)}>
-//             {isModalOpen ? <EventDetails onClose={toggleModal} currentEvent={currentEvent} /> : <div></div>}
-//             <span className="Category">{item.category}</span>
-//             <span className="Event">{item.event}</span>
-//             <span className="Time">{item.time}</span>
-//             <span className="Action" onClick={() => deleteEvent(item.id)}>&#10007;</span>
-//         </li>
-//     );
-// }
+    // map out list of all events
+    // I think Chris might be working on a page that does this same thing in the component/cards branch
+    return (
+        <div>
+            <li>
+                <EventDetails></EventDetails>
+            </li>
+            {/* conditionally render this so it only shows up for people who are logged in */}
+            <AddEvent></AddEvent>
+        </div>
+    );
+}
 
 
-// export default Event;
+export default Event;
