@@ -8,9 +8,6 @@
     src: url('./assets/fonts/Alleria.ttf');
   }
 
-.modalBackdrop {
-    background-color: rgba(42, 136, 160, 0.4);
-}
 
 .modalContainer {
     background-color: #333333;
@@ -33,6 +30,9 @@
     font-family: 'Almeda';
 }
 
+.event-description {
+    text-align:center;
+}
 
 .eventSignup {
     color: black;

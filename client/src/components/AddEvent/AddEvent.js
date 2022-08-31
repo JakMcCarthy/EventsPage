@@ -1,14 +1,16 @@
 import React, {useState, useContext} from "react";
-import './Main.css';
+import '../Main.css';
 
 import { GlobalContext } from '../context/GlobalState';
 
 const AddEvent = () => {
     const [event, setEvent] = useState('');
     const [time, setTime] = useState('');
+    const [description, setDescription] = useState('');
 
     const { addEvent } = useContext(GlobalContext);
     const { events } = useContext(GlobalContext);
+    const { deleteEvent } = useContext(GlobalContext);
 
     const onSubmit = e => {
         e.preventDefault();
@@ -24,14 +26,19 @@ const AddEvent = () => {
         // reset the form
         setEvent('');
         setTime('');
+        setDescription('');
       }
 
     return (
         
         <div className="AddEvent">
             <form onSubmit={onSubmit}>
+
                 <input className="eventField" value={event} type="text" onChange={(e) => setEvent(e.target.value)} placeholder="New Event" />
                 <input className="eventTime" value={time} type="text" onChange={(e) => setTime(e.target.value)} placeholder="Time" />
+                <br/>
+                <textarea className="eventDescription" value={description} type="text" onChange={(e) => setDescription(e.target.value)} placeholder="Description" />
+                <br/>
                 <button className="submitBtn">Add Event</button>
             </form>
         </div>
