@@ -31,6 +31,7 @@ const AddEvent = () => {
     return (
         
         <div className="AddEvent">
+            <h3>Add your event!</h3>
             <form onSubmit={onSubmit}>
 
                 <input className="eventField" value={event} type="text" onChange={(e) => setEvent(e.target.value)} placeholder="New Event" />

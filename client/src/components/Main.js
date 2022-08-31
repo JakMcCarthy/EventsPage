@@ -14,6 +14,7 @@ const Main = () => {
         <div className="Content">
         <div className="Body">
             {/* conditional statement : depending on which page the user wants to visit (tickets, events, login) render one of those*/}
+            {/* if logged in and viewing events, also show add event component above that*/}
         </div>
     </div>
 

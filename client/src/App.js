@@ -7,6 +7,7 @@ import Event from './components/Event/Event';
 import Login from './components/pages/Login/Login';
 import Signup from './components/pages/Signup';
 import Footer from './components/Footer';
+import Hero from './components/HeroSection/heroSection';
 // these two components allow us to define all routes and group them together
 import {Route, Routes} from 'react-router-dom';
 import {GlobalProvider} from './context/GlobalState';
@@ -26,6 +27,7 @@ function App() {
                     <Route path='/signup' element={<Signup />} />
                 </Routes>
             </div>
+            <Hero />
             <Main />
             <Footer />
             {/* <Test /> */}
