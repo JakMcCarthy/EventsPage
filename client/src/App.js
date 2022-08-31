@@ -8,8 +8,8 @@ import Login from './components/pages/Login/Login';
 import Signup from './components/pages/Signup';
 import Footer from './components/Footer';
 // these two components allow us to define all routes and group them together
-import {Route, Routes} from 'react-router-dom';
-import {GlobalProvider} from './context/GlobalState';
+import { Route, Routes } from 'react-router-dom';
+import { GlobalProvider } from './context/GlobalState';
 // this is Aaron's testing element
 // import Test from './components/Test/TestApi';
 
