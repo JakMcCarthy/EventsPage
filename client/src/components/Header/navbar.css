@@ -21,7 +21,7 @@
  .nav {
     background-color: #333333;
     color:aliceblue;
-    display: flexbox;
+    display: flex;
     justify-content: space-between;
     align-items: center;
     gap: 2rem;
@@ -64,6 +64,8 @@
  }
   
 @media only screen and (max-width: 600px) {
-   
+   .nav {
+      display: block;
+   }
 }
  
