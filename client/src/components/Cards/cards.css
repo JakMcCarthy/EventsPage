@@ -19,6 +19,7 @@
   .cards-container {
     display: flex;
     flex-flow: column;
+    flex-wrap: wrap;
     align-items: center;
     margin: 0 auto;
     border: 2px solid #333333;
@@ -28,6 +29,7 @@
   
   .cards-wrapper {
     position: relative;
+    flex-wrap: wrap;
   
     margin: 50px 0  45px;
     
@@ -35,6 +37,7 @@
   
   .cards-items {
     margin-bottom: 24px;
+    flex-wrap: wrap;
   }
   
   .cards-item {
