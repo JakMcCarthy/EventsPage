@@ -23,6 +23,7 @@ This project was a collaboration of the following people:
   * GitHub: https://github.com/Chrisp1993
 
 ##Deployment
+![alt text](/aroundtown.png)
 
 # API and DB Guide
 
